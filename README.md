@@ -83,8 +83,8 @@ The Raspberry Pi captures an image using a **USB webcam** whenever the ESP32 det
 1. **Open** `esp32/esp32_ultrasonic_mqtt.ino` in Arduino IDE.
 
 2. **Install required libraries**
-   - Use **Sketch â†’ Include Library â†’ Manage Libraries...** and install:
-     - **PubSubClient** by Nick Oâ€™Leary  
+   - Use **Sketch Include Library Manage Libraries...** and install:
+     - **PubSubClient** by Nick Leary  
      - **WiFi** (included with the ESP32 Arduino core)
 
 3. **Edit Wi-Fi and broker settings** in the sketch:
@@ -99,8 +99,18 @@ The Raspberry Pi captures an image using a **USB webcam** whenever the ESP32 det
       ii) MQTT connection (shows successful connect or reconnect messages)
       iii) Distance readings and â€œcaptureâ€ publish events
 
-## How it works
+## Example Outputs
 
-1. The HC-SR04 ultrasonic sensor measures distance continuously.
-2. When an object is detected closer than the threshold (default: 50 cm), the ESP32 publishes the message "capture" to the MQTT topic security/capture.
-3. The Raspberry Pi subscribes to security/capture; when it receives the message it captures a fresh image from the USB webcam and saves it with a timestamped filename.
+1. **Raspberri Pi terminal**
+   ```bash
+   Waiting for capture messages...
+   Received: capture
+   Image captured: capture_20251110_172320.jpg
+  
+2. **ESP32 Serial Monitor (115200)**
+   ```bash
+   Connecting to YOUR_WIFI_NAME...
+   Wifi connected! ESP32 IP: 192.168.1.5100
+   Attempting MQTT connection... connected
+   Distance: 34 cm
+   Object detected -> Sending message
