@@ -95,9 +95,9 @@ The Raspberry Pi captures an image using a **USB webcam** whenever the ESP32 det
 
 4. **Upload** the sketch to your ESP32.
 5. **Open Serial Monitor** at **115200 baud** to confirm:
-      i) Wi-Fi connection (shows ESP32 local IP)
-      ii) MQTT connection (shows successful connect or reconnect messages)
-      iii) Distance readings and â€œcaptureâ€ publish events
+   i) Wi-Fi connection (shows ESP32 local IP)
+   ii) MQTT connection (shows successful connect or reconnect messages)
+   iii) Distance readings and 'capture' publish events
 
 ## Example Outputs
 
