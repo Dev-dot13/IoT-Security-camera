@@ -7,11 +7,11 @@ The Raspberry Pi captures an image using a **USB webcam** whenever the ESP32 det
 
 ## Features
 
-- ðŸ§  Object detection via HC-SR04 ultrasonic sensor  
-- ðŸ“¡ Wireless communication over MQTT  
-- ðŸ“· Automatic photo capture on detection  
-- ðŸ’¾ Saved images timestamped on the Raspberry Pi  
-- âš¡ Lightweight and runs in real-time
+- Object detection via HC-SR04 ultrasonic sensor  
+- Wireless communication over MQTT  
+- Automatic photo capture on detection  
+- Saved images timestamped on the Raspberry Pi  
+- Lightweight and runs in real-time
 
 ---
 
